@@ -39,6 +39,30 @@ header {
     cursor: pointer;
 }
 
+/* Move Menu Button to Top Left */
+.top-left {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background: #ff4d94;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 1000;
+}
+
+/* Styled Buttons */
+.styled-button {
+    background-color: #ff4d94;
+    color: white;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+}
+
 /* Navigation Menu */
 nav ul {
     list-style: none;
@@ -65,21 +89,4 @@ nav a {
 
 nav a:hover {
     background-color: #ff3385;
-}
-
-/* Styled Buttons */
-.styled-button {
-    background-color: #ff4d94;
-    color: white;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 18px;
-}
-
-/* Photo Collage */
-#collage img {
-    width: 150px;
-    margin: 10px;
-    border-radius: 10px;
 }
