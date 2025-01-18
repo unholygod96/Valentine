@@ -64,33 +64,18 @@
 <section id="valentines-week">
     <div class="tab-content" id="rose-day" style="display: none;">
         <h2>Rose Day 🌹</h2>
-        <div style="text-align: center; margin-bottom: 20px;">
-            <!-- Virtual Bouquets and Flowers -->
-            <img src="images/rose1.jpg" alt="Rose Bouquet" style="width: 150px; margin: 10px;">
-            <img src="images/rose2.jpg" alt="Rose Bouquet" style="width: 150px; margin: 10px;">
-            <img src="images/rose3.jpg" alt="Rose Bouquet" style="width: 150px; margin: 10px;">
-            <img src="images/rose4.jpg" alt="Rose Bouquet" style="width: 150px; margin: 10px;">
-            <img src="images/rose5.jpg" alt="Rose Bouquet" style="width: 150px; margin: 10px;">
-            <img src="images/rose6.jpg" alt="Rose Bouquet" style="width: 150px; margin: 10px;">
-            <img src="images/rose7.jpg" alt="Rose Bouquet" style="width: 150px; margin: 10px;">
-            <img src="images/rose8.jpg" alt="Rose Bouquet" style="width: 150px; margin: 10px;">
-            <img src="images/rose9.jpg" alt="Rose Bouquet" style="width: 150px; margin: 10px;">
-            <img src="images/rose10.jpg" alt="Rose Bouquet" style="width: 150px; margin: 10px;">
-            <img src="images/rose11.jpg" alt="Rose Bouquet" style="width: 150px; margin: 10px;">
-            <img src="images/rose12.jpg" alt="Rose Bouquet" style="width: 150px; margin: 10px;">
+        <p>Roses are red, violets are blue, my heart is filled with love for you!</p>
+        <div id="bouquet">
+            <img src="https://via.placeholder.com/150?text=Rose+Bouquet" alt="Rose Bouquet">
+            <img src="https://via.placeholder.com/150?text=Rose+Bouquet" alt="Rose Bouquet">
+            <img src="https://via.placeholder.com/150?text=Rose+Bouquet" alt="Rose Bouquet">
+            <img src="https://via.placeholder.com/150?text=Rose+Bouquet" alt="Rose Bouquet">
         </div>
-        <p style="font-size: 18px; text-align: center; color: #d63384; padding: 0 20px;">
-            You remind me so much of roses, my love. 🌹 Just like a rose, your beauty captivates everyone around you with its pure elegance. 
-            The way you shine, even on the cloudiest days, makes my heart bloom in ways I never thought possible.
+        <p>
+            Just like roses, you radiate beauty, grace, and love. Your smile is like the soft petals of a rose that bloom with warmth and kindness. Your presence fills my life with joy, and every moment spent with you feels like an endless garden of happiness. You are the rose in my life, and I am forever grateful to have you by my side. 
         </p>
-        <p style="font-size: 18px; text-align: center; color: #d63384; padding: 0 20px;">
-            Just as roses have petals that are soft and delicate, your kindness and grace make everyone around you feel loved and appreciated. 
-            You are my constant source of joy and the most beautiful person, inside and out, that I have ever known. 
-            Every time I see a rose, I think of you, and I’m reminded of how incredibly blessed I am to have you in my life. 
-            You're more stunning than any flower, and your love fills me with warmth and happiness every single day.
-        </p>
-        <p style="font-size: 18px; text-align: center; color: #d63384; padding: 0 20px;">
-            Happy Rose Day to the one who fills my life with beauty, love, and grace, just like a rose. 🌹💖
+        <p>
+            I love you, not just for who you are, but for how you make me feel—special, cherished, and deeply loved. You are as beautiful as a rose, and your beauty is endless in every way. I'm so lucky to call you mine. 💖
         </p>
     </div>
     <div class="tab-content" id="propose-day" style="display: none;">
@@ -111,6 +96,33 @@
     </div>
 </section>
 
-<script src="script.js"></script>
+<script>
+    // Show/hide the Valentine's days
+    document.getElementById("show-menu").addEventListener("click", function() {
+        var tabsContainer = document.getElementById("tabs-container");
+        if (tabsContainer.style.display === "none") {
+            tabsContainer.style.display = "block";
+        } else {
+            tabsContainer.style.display = "none";
+        }
+    });
+
+    // Show the selected tab
+    var tabButtons = document.querySelectorAll(".tab-button");
+    tabButtons.forEach(function(button) {
+        button.addEventListener("click", function() {
+            var selectedTab = button.getAttribute("data-tab");
+            var allTabs = document.querySelectorAll(".tab-content");
+            allTabs.forEach(function(tab) {
+                if (tab.id === selectedTab) {
+                    tab.style.display = "block";
+                } else {
+                    tab.style.display = "none";
+                }
+            });
+        });
+    });
+</script>
+
 </body>
 </html>
