@@ -16,19 +16,24 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Hidden Elements */
-.hidden {
-    display: none;
+/* Countdown Section */
+#countdown-container {
+    text-align: center;
+    padding: 20px;
 }
 
-/* Love Letter Box */
-.love-box {
-    background: #ffebf2;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(255, 0, 102, 0.5);
-    max-width: 400px;
-    margin: auto;
+#countdown-input {
+    padding: 5px;
+    font-size: 16px;
+    border: 2px solid #ff4d94;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#countdown {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 /* Move Menu Button to Top Left */
@@ -42,20 +47,6 @@ header {
     border-radius: 50%;
     cursor: pointer;
     font-size: 18px;
-    z-index: 1000;
-}
-
-/* Love Letter Button at Bottom Right */
-.bottom-right {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #ff4d94;
-    color: white;
-    padding: 15px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 22px;
     z-index: 1000;
 }
 
