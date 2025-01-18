@@ -22,20 +22,6 @@ header {
     padding: 20px;
 }
 
-#countdown-input {
-    padding: 5px;
-    font-size: 16px;
-    border: 2px solid #ff4d94;
-    border-radius: 5px;
-    margin-right: 10px;
-}
-
-#countdown {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
 /* Navigation Menu */
 nav ul {
     list-style: none;
@@ -64,7 +50,7 @@ nav a:hover {
     background-color: #ff3385;
 }
 
-/* Ensure top-left buttons are positioned correctly */
+/* Top-left buttons */
 #top-left-buttons {
     position: fixed;
     top: 10px;
@@ -81,10 +67,9 @@ nav a:hover {
     border-radius: 50%;
     cursor: pointer;
     font-size: 18px;
-    border: none;
 }
 
-/* Ensure love letter button remains bottom-right */
+/* Love letter button (bottom-right) */
 #love-letter-button {
     position: fixed;
     bottom: 20px;
@@ -108,11 +93,6 @@ nav a:hover {
     margin: 20px;
 }
 
-/* Show active tab */
-.active {
-    display: block;
-}
-
 /* Rose Day Background */
 #rose-day {
     background-image: url('https://imgur.com/PAhioge.jpg');
@@ -121,19 +101,9 @@ nav a:hover {
     padding: 50px;
     text-align: center;
     color: white;
-    display: none;
 }
 
-/* Smooth Transition Effect */
-.tab-content {
-    display: none;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.tab-content.active {
+/* Show active tab */
+.active {
     display: block;
-    opacity: 1;
-    transform: translateY(0);
 }
