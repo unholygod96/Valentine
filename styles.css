@@ -44,6 +44,7 @@ nav {
     padding: 50px;
     text-align: center;
     color: white;
+    display: none;
 }
 
 #rose-day p {
