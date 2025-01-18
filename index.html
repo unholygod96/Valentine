@@ -9,7 +9,12 @@
 <body>
     <header>
         <h1>Happy Valentine's Week ❤️</h1>
-        <div id="countdown">Countdown: <span id="timer"></span></div>
+        <div id="countdown-container">
+            <h2>Count down for you to be my valentine</h2>
+            <input type="datetime-local" id="countdown-input">
+            <button id="set-countdown" class="styled-button">Set Countdown</button>
+            <div id="countdown">Time Left: <span id="timer"></span></div>
+        </div>
     </header>
     
     <button id="menu-button" class="styled-button top-left">☰</button>
@@ -32,18 +37,6 @@
         </ul>
     </nav>
 
-    <div id="love-letter-container">
-        <button id="love-letter-button" class="styled-button bottom-right">💌</button>
-        <div id="love-letter" class="hidden love-box">
-            <p><strong>Happy Valentine's Day!</strong></p>
-            <p>Idk when you are seeing this, but thank you for being such an amazing girlfriend. I love you so much and miss you deeply. I can't wait to see you again.</p>
-            <p>You are the best thing that has ever happened to me, and I don't know what I would do without you. You make my life brighter, my days happier, and my heart fuller.</p>
-            <p>Your laughter is my favorite melody, and your smile is my sunshine on the cloudiest days. Every moment with you feels like magic, and I cherish every memory we make together.</p>
-            <p>You are my safe place, my love, and my forever. No matter where life takes us, my heart will always belong to you.</p>
-            <p>I love you endlessly. ❤️</p>
-        </div>
-    </div>
-    
     <script src="script.js"></script>
 </body>
 </html>
