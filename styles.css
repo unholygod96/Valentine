@@ -31,14 +31,6 @@ header {
     margin: auto;
 }
 
-/* Hidden Heart Button */
-.hidden-heart {
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-}
-
 /* Move Menu Button to Top Left */
 .top-left {
     position: fixed;
@@ -50,6 +42,20 @@ header {
     border-radius: 50%;
     cursor: pointer;
     font-size: 18px;
+    z-index: 1000;
+}
+
+/* Love Letter Button at Bottom Right */
+.bottom-right {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ff4d94;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 22px;
     z-index: 1000;
 }
 
