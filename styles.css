@@ -36,6 +36,22 @@ nav {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Rose Day Styling */
+#rose-day {
+    background-image: url('https://imgur.com/PAhioge.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    text-align: center;
+    color: white;
+}
+
+#rose-day p {
+    font-size: 18px;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
 /* Navigation Buttons */
 nav ul {
     list-style: none;
@@ -62,26 +78,6 @@ nav a {
 
 nav a:hover {
     background-color: #ff3385;
-}
-
-/* Top-left buttons */
-#top-left-buttons {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    display: flex;
-    gap: 10px;
-    z-index: 1000;
-}
-
-.styled-button {
-    background-color: #ff4d94;
-    color: white;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 18px;
-    border: none;
 }
 
 /* Love letter button (bottom-right) */
