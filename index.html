@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- Header -->
     <header>
         <h1>Happy Valentine's Week ❤️</h1>
         <div id="countdown-container">
@@ -16,44 +18,96 @@
             <div id="countdown">Time Left: <span id="timer"></span></div>
         </div>
     </header>
-    
+
+    <!-- Floating Buttons (Menu & Music) -->
     <div id="top-left-buttons">
         <button id="menu-button" class="styled-button">☰</button>
-        <button id="toggle-music" class="styled-button">🎵</button>
+        <button id="toggle-music" class="styled-button">🎵 Play Music</button>
     </div>
-    
-    <audio id="background-music" loop>
-        <source src="double-take.mp3" type="audio/mpeg">
-    </audio>
-    
+
+    <!-- Background Music -->
+    <audio id="background-music" loop></audio>
+
+    <!-- Side Menu -->
     <nav id="side-menu" class="hidden">
         <ul>
             <li><a href="#" onclick="showTab('rose-day')">Rose Day</a></li>
-            <li><a href="#propose-day">Propose Day</a></li>
-            <li><a href="#chocolate-day">Chocolate Day</a></li>
-            <li><a href="#teddy-day">Teddy Day</a></li>
-            <li><a href="#promise-day">Promise Day</a></li>
-            <li><a href="#hug-day">Hug Day</a></li>
-            <li><a href="#kiss-day">Kiss Day</a></li>
-            <li><a href="#valentines-day">Valentine's Day</a></li>
-            <li><a href="#photo-collage">Photo Collage</a></li>
+            <li><a href="#" onclick="showTab('propose-day')">Propose Day</a></li>
+            <li><a href="#" onclick="showTab('chocolate-day')">Chocolate Day</a></li>
+            <li><a href="#" onclick="showTab('teddy-day')">Teddy Day</a></li>
+            <li><a href="#" onclick="showTab('promise-day')">Promise Day</a></li>
+            <li><a href="#" onclick="showTab('hug-day')">Hug Day</a></li>
+            <li><a href="#" onclick="showTab('kiss-day')">Kiss Day</a></li>
+            <li><a href="#" onclick="showTab('valentines-day')">Valentine's Day</a></li>
+            <li><a href="#" onclick="showTab('photo-collage')">Photo Collage</a></li>
         </ul>
     </nav>
 
-    <div id="rose-day" class="tab-content">
-        <h2>Rose Day 🌹</h2>
-        <p>Just like the most delicate and beautiful roses, you brighten my life with your presence. Your kindness, warmth, and love blossom in my heart like a garden filled with the most stunning flowers. You are my most cherished rose, and I feel so lucky to have you in my life.</p>
-    </div>
-
+    <!-- Love Letter Feature -->
     <div id="love-letter-container">
         <button id="love-letter-button" class="styled-button bottom-right">💌</button>
         <div id="love-letter" class="hidden love-box">
             <p><strong>Happy Valentine's Day! ❤️</strong></p>
-            <p>Idk when you are seeing this, but thank you for being such an amazing girlfriend.</p>
-            <p>I love you so much and miss you deeply. I can't wait to see you again.</p>
+            <p>Loading love message...</p>
         </div>
     </div>
-    
+
+    <!-- Tabs for Different Days -->
+    <div id="rose-day" class="tab-content">
+        <h2>Rose Day 🌹</h2>
+        <p>You brighten my life just like a beautiful rose. 🌸</p>
+    </div>
+
+    <div id="propose-day" class="tab-content">
+        <h2>Propose Day 💍</h2>
+        <p>Will you be mine forever? 😍</p>
+    </div>
+
+    <div id="chocolate-day" class="tab-content">
+        <h2>Chocolate Day 🍫</h2>
+        <p>Sweet like chocolate, your love fills my heart. 💖</p>
+    </div>
+
+    <div id="teddy-day" class="tab-content">
+        <h2>Teddy Day 🧸</h2>
+        <p>Sending you a virtual hug with this teddy! 🤗</p>
+    </div>
+
+    <div id="promise-day" class="tab-content">
+        <h2>Promise Day 💞</h2>
+        <p>I promise to always love and cherish you. 💑</p>
+    </div>
+
+    <div id="hug-day" class="tab-content">
+        <h2>Hug Day 🤗</h2>
+        <p>Big warm hugs for my special one! ❤️</p>
+    </div>
+
+    <div id="kiss-day" class="tab-content">
+        <h2>Kiss Day 💋</h2>
+        <p>Sealing my love with a virtual kiss! 😘</p>
+    </div>
+
+    <div id="valentines-day" class="tab-content">
+        <h2>Valentine's Day 💖</h2>
+        <p>You are my everything, my Valentine forever. 💕</p>
+    </div>
+
+    <div id="photo-collage" class="tab-content">
+        <h2>Photo Collage 📸</h2>
+        <p>Our beautiful moments together. 🥰</p>
+    </div>
+
+    <!-- Secret Message (Hidden Surprise) -->
+    <div id="secret-message-container">
+        <button id="secret-button" class="styled-button">💖 Click for a Surprise</button>
+        <div id="secret-message" class="hidden">
+            <h3>You are the best thing that ever happened to me! 💕</h3>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
     <script src="script.js"></script>
+
 </body>
 </html>
