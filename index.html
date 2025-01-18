@@ -103,6 +103,30 @@
     </div>
 </section>
 
-<script src="script.js"></script>
+<script>
+    // JavaScript for Show Days Button
+    document.getElementById('show-menu').addEventListener('click', function () {
+        var tabsContainer = document.getElementById('tabs-container');
+        if (tabsContainer.style.display === 'none') {
+            tabsContainer.style.display = 'block';
+        } else {
+            tabsContainer.style.display = 'none';
+        }
+    });
+
+    // JavaScript for Tabs functionality
+    var tabButtons = document.querySelectorAll('.tab-button');
+    tabButtons.forEach(function (button) {
+        button.addEventListener('click', function () {
+            var tabContent = document.querySelectorAll('.tab-content');
+            tabContent.forEach(function (content) {
+                content.style.display = 'none';
+            });
+            var activeTab = document.getElementById(button.getAttribute('data-tab'));
+            activeTab.style.display = 'block';
+        });
+    });
+</script>
+
 </body>
 </html>
