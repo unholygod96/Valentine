@@ -84,6 +84,87 @@
     </div>
 </section>
 
-<script src="script.js"></script>
+<script>
+// Show/Hide menu functionality
+const showMenuButton = document.getElementById('show-menu');
+const tabsContainer = document.getElementById('tabs-container');
+showMenuButton.addEventListener('click', () => {
+    if (tabsContainer.style.display === 'none') {
+        tabsContainer.style.display = 'block';
+    } else {
+        tabsContainer.style.display = 'none';
+    }
+});
+
+// Tab switching functionality
+const tabButtons = document.querySelectorAll('.tab-button');
+const tabContents = document.querySelectorAll('.tab-content');
+tabButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const tab = button.dataset.tab;
+        tabContents.forEach(content => {
+            content.style.display = content.id === tab ? 'block' : 'none';
+        });
+    });
+});
+
+// Open Love Letter functionality
+const loveLetterButton = document.getElementById('hidden-button');
+const loveLetter = document.getElementById('love-letter');
+const closeButton = document.getElementById('close-button');
+
+loveLetterButton.addEventListener('click', () => {
+    loveLetter.style.display = 'block';
+});
+
+closeButton.addEventListener('click', () => {
+    loveLetter.style.display = 'none';
+});
+
+// Countdown functionality
+const countdownDateInput = document.getElementById('countdown-date');
+const setCountdownButton = document.getElementById('set-countdown');
+const timerElement = document.getElementById('timer');
+
+setCountdownButton.addEventListener('click', () => {
+    const countdownDate = new Date(countdownDateInput.value).getTime();
+    
+    if (!countdownDate) return; // No date selected
+    
+    const countdownInterval = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = countdownDate - now;
+        
+        if (distance < 0) {
+            clearInterval(countdownInterval);
+            timerElement.innerHTML = "EXPIRED";
+        } else {
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }
+    }, 1000);
+});
+
+// Photo collage functionality
+const photoUpload = document.getElementById('photo-upload');
+const collageArea = document.getElementById('collage');
+
+photoUpload.addEventListener('change', (event) => {
+    const files = event.target.files;
+    collageArea.innerHTML = ''; // Clear existing images
+    
+    for (let i = 0; i < files.length; i++) {
+        const image = document.createElement('img');
+        image.src = URL.createObjectURL(files[i]);
+        image.style.width = '100px';
+        image.style.margin = '5px';
+        collageArea.appendChild(image);
+    }
+});
+</script>
+
 </body>
 </html>
