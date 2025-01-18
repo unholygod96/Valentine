@@ -1,57 +1,27 @@
-document.addEventListener("DOMContentLoaded", function () {
-    function showTab(tabId) {
-        document.querySelectorAll('.tab-content').forEach(tab => {
-            tab.style.display = 'none';
-        });
+function showerRoses() {
+    alert("🌹 Roses are falling for you! 🌹");
+}
 
-        let activeTab = document.getElementById(tabId);
-        if (activeTab) {
-            activeTab.style.display = 'block';
-        }
-    }
+function launchFireworks() {
+    alert("🎆 A sparkling proposal just for you! 💍");
+}
 
-    // Default tab
-    showTab('rose-day');
+function rainChocolates() {
+    alert("🍫 Sweet chocolates raining down! 🍫");
+}
 
-    // Navigation Functionality
-    document.getElementById("menu-button").addEventListener("click", function () {
-        let menu = document.getElementById("side-menu");
-        if (menu.classList.contains("menu-open")) {
-            menu.classList.remove("menu-open");
-        } else {
-            menu.classList.add("menu-open");
-        }
-    });
+function dropTeddies() {
+    alert("🧸 Teddy hugs are coming your way! 🤗");
+}
 
-    // Love Letter Toggle
-    document.getElementById("love-letter-button").addEventListener("click", function () {
-        document.getElementById("love-letter").classList.toggle("hidden");
-    });
+function giveHug() {
+    alert("🤗 A big warm hug just for you! ❤️");
+}
 
-    // Countdown Timer
-    document.getElementById("set-countdown").addEventListener("click", function () {
-        let userTime = document.getElementById("countdown-input").value;
-        if (!userTime) return;
+function kissEffect() {
+    alert("💋 A sweet kiss just for you! 😘");
+}
 
-        let targetTime = new Date(userTime).getTime();
-        let countdownElement = document.getElementById("timer");
-
-        let countdownInterval = setInterval(function () {
-            let now = new Date().getTime();
-            let timeLeft = targetTime - now;
-
-            if (timeLeft <= 0) {
-                clearInterval(countdownInterval);
-                countdownElement.innerHTML = "Time's Up! 💖";
-                return;
-            }
-
-            let days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-            let hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            let minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-            let seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
-
-            countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-        }, 1000);
-    });
-});
+function heartsRain() {
+    alert("❤️ Love is in the air! ❤️");
+}
