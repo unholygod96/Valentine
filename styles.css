@@ -1,16 +1,67 @@
-/* Hide tab content by default */
-.tab-content {
-    display: none;
+/* General Styling */
+body {
+    background-color: #ffe6e6;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: #d63384;
+    margin: 0;
+    padding: 0;
 }
 
-/* Rose Day Background */
-#rose-day {
-    background-image: url('https://imgur.com/PAhioge.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 50px;
+/* Header Styling */
+header {
+    background-color: #ffb3b3;
+    padding: 20px;
+    font-size: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Countdown Section */
+#countdown-container {
     text-align: center;
+    padding: 20px;
+}
+
+#countdown-input {
+    padding: 5px;
+    font-size: 16px;
+    border: 2px solid #ff4d94;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#countdown {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Navigation Menu */
+nav ul {
+    list-style: none;
+    padding: 0;
+    background: #ff66b2;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 10px;
+}
+
+nav a {
+    text-decoration: none;
     color: white;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #e60073;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: #ff3385;
 }
 
 /* Ensure top-left buttons are positioned correctly */
@@ -30,6 +81,7 @@
     border-radius: 50%;
     cursor: pointer;
     font-size: 18px;
+    border: none;
 }
 
 /* Ensure love letter button remains bottom-right */
@@ -46,7 +98,42 @@
     z-index: 1000;
 }
 
+/* Hide tab content by default */
+.tab-content {
+    display: none;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+
 /* Show active tab */
 .active {
     display: block;
+}
+
+/* Rose Day Background */
+#rose-day {
+    background-image: url('https://imgur.com/PAhioge.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
+    text-align: center;
+    color: white;
+    display: none;
+}
+
+/* Smooth Transition Effect */
+.tab-content {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.tab-content.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
 }
