@@ -12,6 +12,12 @@
         <div id="countdown">Countdown: <span id="timer"></span></div>
     </header>
     
+    <button id="menu-button">☰</button>
+    <audio id="background-music" loop>
+        <source src="double-take.mp3" type="audio/mpeg">
+    </audio>
+    <button id="toggle-music">🎵</button>
+    
     <nav>
         <ul>
             <li><a href="#rose-day">Rose Day</a></li>
@@ -26,6 +32,18 @@
         </ul>
     </nav>
 
+    <div id="love-letter-container" style="position: absolute; top: 50px; right: 50px; opacity: 0.1; cursor: pointer;">
+        <span id="hidden-heart">❤️</span>
+        <div id="love-letter" class="hidden" style="display: none; background: #ffebf2; padding: 20px; border-radius: 10px; box-shadow: 0 0 15px rgba(255, 0, 102, 0.5); max-width: 400px;">
+            <p><strong>Happy Valentine's Day!</strong></p>
+            <p>Idk when you are seeing this, but thank you for being such an amazing girlfriend. I love you so much and miss you deeply. I can't wait to see you again.</p>
+            <p>You are the best thing that has ever happened to me, and I don't know what I would do without you. You make my life brighter, my days happier, and my heart fuller.</p>
+            <p>Your laughter is my favorite melody, and your smile is my sunshine on the cloudiest days. Every moment with you feels like magic, and I cherish every memory we make together.</p>
+            <p>You are my safe place, my love, and my forever. No matter where life takes us, my heart will always belong to you.</p>
+            <p>I love you endlessly. ❤️</p>
+        </div>
+    </div>
+    
     <section id="valentines-week">
         <div class="tab-content" id="rose-day">
             <h2>Rose Day 🌹</h2>
@@ -37,7 +55,6 @@
             <p>From the moment I met you, I knew my heart belonged to you.</p>
             <button onclick="showProposal()">Click for a Surprise</button>
         </div>
-        <!-- Add other days similarly -->
     </section>
 
     <section id="photo-collage">
@@ -48,11 +65,12 @@
         </div>
     </section>
 
-    <section id="proposal">
-        <h2>A Special Question 💖</h2>
-        <p>Click the stars to reveal the message...</p>
-        <div id="hidden-message">Will you be my Valentine? ❤️</div>
-    </section>
+    <script>
+        document.getElementById("hidden-heart").addEventListener("click", function() {
+            let letter = document.getElementById("love-letter");
+            letter.style.display = letter.style.display === "none" ? "block" : "none";
+        });
+    </script>
 
     <script src="script.js"></script>
 </body>
