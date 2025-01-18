@@ -16,55 +16,35 @@
     <div id="custom-countdown">
         <label for="countdown-date">Set Your Countdown:</label>
         <input type="datetime-local" id="countdown-date" />
-        <button id="set-countdown" style="background-color: #ff66b2; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer;">Set Countdown</button>
+        <button id="set-countdown">Set Countdown</button>
     </div>
 </header>
 
 <div id="love-letter-section">
-    <button id="hidden-button" style="display: inline-block; position: absolute; bottom: 20px; right: 20px; background: #ff66b2; color: white; border: none; padding: 10px 15px; border-radius: 50px; cursor: pointer; font-size: 16px; box-shadow: 0 0 15px #ff99c2;">
-        Open Love Letter ❤️
-    </button>
-    <div id="love-letter" style="display: none; padding: 20px; border-radius: 15px; background: #ffe6f7; color: #d63384; font-size: 18px; text-align: left; box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); margin: 20px auto; width: 80%; position: relative;">
-        <button id="close-button" style="position: absolute; top: 10px; right: 10px; background: #ff4d94; color: white; border: none; border-radius: 50%; width: 30px; height: 30px; cursor: pointer; font-size: 16px; font-weight: bold;">×</button>
-        <p>
-            Happy Valentine's Day! 💕
-            I don't know when you're reading this, but I want you to know how much you mean to me. 
-            You are the most incredible girlfriend I could have ever hoped for, and I am endlessly grateful for you.
-        </p>
-        <p>
-            Your smile lights up my world like nothing else, and every moment spent with you feels like a beautiful dream. 
-            I miss you more than words can say and cannot wait for the next time we’re together. 
-            You make my life brighter, happier, and so full of love.
-        </p>
-        <p>
-            Thank you for being you—kind, loving, and everything I’ve ever needed. 
-            You are my heart, my soul, my everything, and I cherish every moment we share. 
-            I promise to always stand by your side and make you as happy as you’ve made me.
-        </p>
-        <p>
-            You are the best thing that has ever happened to me, and I can’t imagine my life without you. 
-            Here’s to many more beautiful memories and moments together. 
-            I love you more than words can express, and I always will. 💖
-        </p>
+    <button id="hidden-button">Open Love Letter ❤️</button>
+    <div id="love-letter">
+        <button id="close-button">×</button>
+        <p>Happy Valentine's Day! 💕</p>
+        <p>Your smile lights up my world like nothing else...</p>
+        <p>You are the best thing that has ever happened to me...</p>
     </div>
 </div>
 
 <nav>
-    <div id="valentines-menu" style="position: absolute; top: 10px; left: 10px;">
-        <button id="show-menu" style="background: #e60073; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; font-size: 16px;">Show Days</button>
-        <div id="tabs-container" style="display: none; background: #ffb3b3; padding: 10px; border-radius: 5px; margin-top: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
-            <button class="tab-button" data-tab="rose-day" style="background: #ff66b2; color: white; border: none; padding: 10px; margin: 5px; border-radius: 5px; cursor: pointer;">Rose Day</button>
-            <button class="tab-button" data-tab="propose-day" style="background: #ff66b2; color: white; border: none; padding: 10px; margin: 5px; border-radius: 5px; cursor: pointer;">Propose Day</button>
-            <button class="tab-button" data-tab="chocolate-day" style="background: #ff66b2; color: white; border: none; padding: 10px; margin: 5px; border-radius: 5px; cursor: pointer;">Chocolate Day</button>
+    <div id="valentines-menu">
+        <button id="show-menu" class="tab-button">Show Days</button>
+        <div id="tabs-container">
+            <button class="tab-button" data-tab="rose-day">Rose Day</button>
+            <button class="tab-button" data-tab="propose-day">Propose Day</button>
+            <button class="tab-button" data-tab="chocolate-day">Chocolate Day</button>
         </div>
     </div>
 </nav>
 
 <section id="valentines-week">
-    <div class="tab-content" id="rose-day" style="display: none;">
+    <div class="tab-content" id="rose-day">
         <h2>Rose Day 🌹</h2>
-        <p>Roses are red, violets are blue, my heart is filled with love for you!</p>
-        <div style="display: flex; flex-wrap: wrap; gap: 15px;">
+        <div class="rose-bouquets">
             <img src="https://via.placeholder.com/150x150/FF66B2/FFFFFF?text=Rose+Bouquet" alt="Bouquet 1">
             <img src="https://via.placeholder.com/150x150/FF66B2/FFFFFF?text=Rose+Bouquet" alt="Bouquet 2">
             <img src="https://via.placeholder.com/150x150/FF66B2/FFFFFF?text=Rose+Bouquet" alt="Bouquet 3">
@@ -73,10 +53,10 @@
             <img src="https://via.placeholder.com/150x150/FF66B2/FFFFFF?text=Rose+Bouquet" alt="Bouquet 6">
         </div>
         <p>
-            You remind me so much of roses—your beauty, your grace, and your warmth. Like a rose, you are delicate yet strong, and you bloom in every way imaginable. The way your smile lights up my world is like a bouquet of roses—vibrant, fresh, and full of love. Each time I see you, I feel like I’m receiving the most beautiful flower in the world.
+            You remind me so much of roses—your beauty, your grace, and your warmth. Like a rose, you are delicate yet strong, and you bloom in every way imaginable. The way your smile lights up my world is like a bouquet of roses—vibrant, fresh, and full of love.
         </p>
         <p>
-            Just like roses need care to grow, you nurture my heart and soul with your love. You are my precious flower, the one I want to cherish and hold close forever. Every moment with you is like a petal unfolding, revealing more beauty than I could ever describe. The way you make me feel is beyond words—just like the fragrance of roses, your presence fills every corner of my life with sweetness and joy.
+            Just like roses need care to grow, you nurture my heart and soul with your love. You are my precious flower, the one I want to cherish and hold close forever. Every moment with you is like a petal unfolding, revealing more beauty than I could ever describe.
         </p>
         <p>
             You are the most beautiful rose in my garden, and I will always admire you, love you, and cherish you, just as I would the most beautiful flower in the world. 💖
@@ -84,33 +64,6 @@
     </div>
 </section>
 
-<section id="photo-collage">
-    <h2>Our Memories Together 📸</h2>
-    <div id="collage-area">
-        <input type="file" id="photo-upload" multiple>
-        <div id="collage"></div>
-    </div>
-</section>
-
-<script>
-    // JavaScript to show and hide the menu and tabs
-    document.getElementById('show-menu').addEventListener('click', function() {
-        var tabsContainer = document.getElementById('tabs-container');
-        tabsContainer.style.display = (tabsContainer.style.display === 'none' || tabsContainer.style.display === '') ? 'block' : 'none';
-    });
-
-    var tabButtons = document.querySelectorAll('.tab-button');
-    tabButtons.forEach(function(button) {
-        button.addEventListener('click', function() {
-            var tabId = this.getAttribute('data-tab');
-            var tabs = document.querySelectorAll('.tab-content');
-            tabs.forEach(function(tab) {
-                tab.style.display = 'none';
-            });
-            document.getElementById(tabId).style.display = 'block';
-        });
-    });
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
