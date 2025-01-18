@@ -198,4 +198,33 @@ document.addEventListener("DOMContentLoaded", function () {
     // Default Countdown (e.g., Valentine's Day)
     startCountdown("Feb 14, 2025 00:00:00");
 });
+const loveLetter = document.getElementById("love-letter");
+const hiddenButton = document.getElementById("hidden-button");
+const closeButton = document.getElementById("close-button");
+
+hiddenButton.addEventListener("click", function () {
+    loveLetter.style.display = "block";
+});
+
+closeButton.addEventListener("click", function () {
+    loveLetter.style.display = "none";
+});
+const photoUpload = document.getElementById("photo-upload");
+const collage = document.getElementById("collage");
+
+photoUpload.addEventListener("change", function () {
+    collage.innerHTML = ""; // Clear existing images
+    Array.from(photoUpload.files).forEach((file) => {
+        const reader = new FileReader();
+        reader.onload = function (e) {
+            const img = document.createElement("img");
+            img.src = e.target.result;
+            img.style.width = "150px";
+            img.style.margin = "5px";
+            img.style.borderRadius = "10px";
+            collage.appendChild(img);
+        };
+        reader.readAsDataURL(file);
+    });
+});
 
