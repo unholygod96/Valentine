@@ -17,11 +17,14 @@
         </div>
     </header>
     
-    <button id="menu-button" class="styled-button top-left">☰</button>
+    <div id="top-left-buttons">
+        <button id="menu-button" class="styled-button top-left">☰</button>
+        <button id="toggle-music" class="styled-button top-left">🎵</button>
+    </div>
+    
     <audio id="background-music" loop>
         <source src="double-take.mp3" type="audio/mpeg">
     </audio>
-    <button id="toggle-music" class="styled-button">🎵</button>
     
     <nav id="side-menu" class="hidden">
         <ul>
@@ -36,10 +39,9 @@
             <li><a href="#photo-collage">Photo Collage</a></li>
         </ul>
     </nav>
-
-    <!-- Hidden Love Letter Button -->
-    <div id="love-letter-container" class="hidden-heart">
-        <button id="love-letter-button" class="styled-button">💌</button>
+    
+    <div id="love-letter-container">
+        <button id="love-letter-button" class="styled-button bottom-right">💌</button>
         <div id="love-letter" class="hidden love-box">
             <p><strong>Happy Valentine's Day! ❤️</strong></p>
             <p>Idk when you are seeing this, but thank you for being such an amazing girlfriend.</p>
