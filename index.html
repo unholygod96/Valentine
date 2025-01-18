@@ -76,29 +76,14 @@
     </div>
 </section>
 
-<script>
-    // Show/Hide menu functionality
-    const showMenuButton = document.getElementById('show-menu');
-    const tabsContainer = document.getElementById('tabs-container');
-    showMenuButton.addEventListener('click', () => {
-        if (tabsContainer.style.display === 'none') {
-            tabsContainer.style.display = 'block';
-        } else {
-            tabsContainer.style.display = 'none';
-        }
-    });
+<section id="photo-collage">
+    <h2>Our Memories Together 📸</h2>
+    <div id="collage-area">
+        <input type="file" id="photo-upload" multiple>
+        <div id="collage"></div>
+    </div>
+</section>
 
-    // Tab switching functionality
-    const tabButtons = document.querySelectorAll('.tab-button');
-    const tabContents = document.querySelectorAll('.tab-content');
-    tabButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            const tab = button.dataset.tab;
-            tabContents.forEach(content => {
-                content.style.display = content.id === tab ? 'block' : 'none';
-            });
-        });
-    });
-</script>
+<script src="script.js"></script>
 </body>
 </html>
