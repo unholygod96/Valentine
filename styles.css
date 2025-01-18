@@ -1,156 +1,52 @@
-/* General Page Styling */
-body {
-    background: linear-gradient(to right, #ff9a9e, #fecfef);
-    font-family: 'Poppins', sans-serif;
-    text-align: center;
-    color: #6a0572;
-    margin: 0;
-    padding: 0;
-}
-
-/* Header Styling */
-header {
-    background: rgba(255, 255, 255, 0.8);
-    padding: 20px;
-    font-size: 28px;
-    font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    margin: 20px auto;
-    display: inline-block;
-    color: #ff007f;
-}
-
-/* Countdown Section */
-#countdown-container {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    display: inline-block;
-    margin-top: 20px;
-    transition: all 0.3s ease-in-out;
-}
-
-#countdown-input {
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ff007f;
-    text-align: center;
-    font-size: 16px;
-}
-
-#countdown {
-    font-size: 22px;
-    font-weight: bold;
-    margin-top: 15px;
-    color: #ff007f;
-}
-
-/* Styled Buttons */
-.styled-button {
-    background: linear-gradient(to right, #ff007f, #ff66b2);
-    color: white;
-    border: none;
-    padding: 12px 18px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    transition: 0.3s;
-    outline: none;
-}
-
-.styled-button:hover {
-    background: linear-gradient(to right, #ff3385, #ff99cc);
-    transform: scale(1.05);
-}
-
-/* Navigation Menu */
-#side-menu {
+/* ❤️ Floating Hearts Animation ❤️ */
+.heart {
     position: fixed;
-    left: -250px;
-    top: 0;
-    width: 250px;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
-    transition: 0.4s;
-    padding-top: 20px;
-    z-index: 1000;
-    text-align: left;
-}
-
-#side-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-#side-menu ul li {
-    padding: 15px;
-    text-align: center;
-}
-
-#side-menu ul li a {
-    text-decoration: none;
-    color: #ff007f;
-    font-size: 18px;
-    font-weight: bold;
-    display: block;
-    transition: 0.3s;
-}
-
-#side-menu ul li a:hover {
-    background: #ff007f;
-    color: white;
-    border-radius: 5px;
-}
-
-/* Open Menu */
-.menu-open {
-    left: 0 !important;
-}
-
-/* Top Left Buttons */
-#top-left-buttons {
-    position: fixed;
-    top: 20px;
-    left: 20px;
-}
-
-#menu-button {
-    font-size: 22px;
-    background: white;
-    color: #ff007f;
-    border-radius: 50%;
-    padding: 12px;
-    width: 50px;
-    height: 50px;
-    border: none;
-    cursor: pointer;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* Love Letter Styling */
-#love-letter-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: linear-gradient(to right, #ff007f, #ff66b2);
-    color: white;
-    padding: 18px;
-    border-radius: 50%;
-    cursor: pointer;
+    bottom: 0;
+    left: 50%;
     font-size: 24px;
-    z-index: 1000;
-    transition: 0.3s;
+    color: red;
+    animation: float 5s linear infinite;
+    opacity: 0.7;
 }
 
-#love-letter-button:hover {
-    transform: scale(1.1);
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
 }
 
+/* 🎉 Confetti Effect 🎉 */
+.confetti {
+    position: fixed;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    background: red;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: fall 3s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+/* Hidden elements */
+.hidden {
+    display: none !important;
+}
+
+/* Love letter with animation */
 #love-letter {
     display: none;
     padding: 20px;
@@ -163,30 +59,16 @@ header {
     width: 250px;
     text-align: center;
     font-size: 18px;
+    animation: fadeIn 1s ease-in-out;
 }
 
-/* Tab Styling */
-.tab-content {
-    display: none;
-    padding: 20px;
-    border-radius: 15px;
-    background: white;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    margin: 20px auto;
-    max-width: 500px;
-    transition: all 0.3s ease-in-out;
-}
-
-#rose-day {
-    display: block; /* Default visible tab */
-}
-
-/* Responsive Design */
-@media screen and (max-width: 600px) {
-    #countdown-container {
-        width: 90%;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
     }
-    #side-menu {
-        width: 200px;
+    to {
+        opacity: 1;
+        transform: scale(1);
     }
 }
