@@ -3,10 +3,14 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll('.tab-content').forEach(tab => {
             tab.style.display = 'none';
         });
-        document.getElementById(tabId).style.display = 'block';
+
+        let activeTab = document.getElementById(tabId);
+        if (activeTab) {
+            activeTab.style.display = 'block';
+        }
     }
 
-    // Ensure Rose Day tab is shown on page load
+    // Ensure "Rose Day" tab is shown on page load
     showTab('rose-day');
 
     // Assign tab switching functionality to nav links
@@ -24,6 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
         menu.classList.toggle("hidden");
     });
 
+    // Hide the menu initially
+    document.getElementById("side-menu").classList.add("hidden");
+
     // Toggle love letter visibility
     document.getElementById("love-letter-button").addEventListener("click", function () {
         let loveLetter = document.getElementById("love-letter");
@@ -32,13 +39,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Toggle background music
     let music = document.getElementById("background-music");
-    document.getElementById("toggle-music").addEventListener("click", function () {
+    let musicToggleButton = document.getElementById("toggle-music");
+
+    musicToggleButton.addEventListener("click", function () {
         if (music.paused) {
             music.play();
-            this.textContent = "🔇";
+            this.textContent = "🔇";  // Update button to show mute option
         } else {
             music.pause();
-            this.textContent = "🎵";
+            this.textContent = "🎵";  // Update button to show play option
         }
     });
 
