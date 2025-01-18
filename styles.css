@@ -1,168 +1,100 @@
-/* General Styling */
+/* Basic Styles */
 body {
-    background-color: #ffe6e6;
-    font-family: 'Arial', sans-serif;
-    text-align: center;
-    color: #d63384;
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
-/* Header Styling */
 header {
-    background-color: #ffb3b3;
-    padding: 20px;
-    font-size: 24px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Navigation Bar */
-nav ul {
-    list-style: none;
-    padding: 0;
-    background: #ff66b2;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    display: inline;
-    margin: 10px;
-}
-
-nav a {
-    text-decoration: none;
+    background-color: #ff66b2;
     color: white;
+    padding: 20px;
+}
+
+#countdown {
     font-size: 18px;
+}
+
+#countdown-date {
+    padding: 5px;
+    margin-right: 10px;
+}
+
+#set-countdown {
+    padding: 8px 16px;
+    background-color: #ff66b2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Love Letter Styles */
+#love-letter {
+    display: none;
+    background: #ffe6f7;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    color: #d63384;
+    font-size: 18px;
+    text-align: left;
+    margin: 20px auto;
+    width: 80%;
+}
+
+#hidden-button {
+    padding: 10px 15px;
+    background-color: #ff66b2;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Show Days and Tabs */
+#tabs-container {
+    display: none;
+    background: #ffb3b3;
     padding: 10px;
     border-radius: 5px;
-    background-color: #e60073;
-    transition: 0.3s;
+    margin-top: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-nav a:hover {
-    background-color: #ff3385;
+.tab-button {
+    background: #ff66b2;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-/* Section Styling */
-section {
-    padding: 20px;
-    margin: 20px;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Valentine's Week Tabs */
 .tab-content {
     display: none;
     padding: 20px;
-    border: 2px solid #ff66b2;
+    background-color: #ffe6f7;
     border-radius: 10px;
-    background-color: #fff;
-    margin: 20px;
+    margin: 10px 0;
 }
 
-.tab-content img {
-    width: 200px;
-    border-radius: 10px;
-}
-
-/* Proposal Section */
-#proposal {
-    background: #ff9999;
-    padding: 30px;
-    border-radius: 10px;
-    font-size: 24px;
-    display: none;
-}
-
-#hidden-message {
-    display: none;
-    font-size: 28px;
-    font-weight: bold;
-    color: #ff3366;
-}
-
-/* Photo Collage */
-#photo-collage {
-    background: #ffcccc;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-#collage img {
+/* Rose Day Specific Styling */
+.rose-bouquets img {
     width: 150px;
+    height: 150px;
     margin: 10px;
-    border-radius: 10px;
-}
-/* Falling Hearts Animation */
-@keyframes fall {
-    0% { transform: translateY(-100px) scale(1); opacity: 1; }
-    100% { transform: translateY(100vh) scale(0.5); opacity: 0; }
 }
 
-.heart {
-    position: fixed;
-    color: red;
-    font-size: 20px;
-    animation: fall linear infinite;
-}
-/* Falling Hearts Animation */
-@keyframes fall {
-    0% { transform: translateY(-100px) scale(1); opacity: 1; }
-    100% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+#rose-day p {
+    text-align: left;
 }
 
-.heart {
-    position: fixed;
-    color: red;
-    font-size: 20px;
-    animation: fall linear infinite;
+#photo-collage {
+    margin-top: 30px;
 }
-/* Smooth Transition Effect */
-.tab-content {
-    display: none;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.tab-content.active {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
-}
-/* Glowing Button & Link Effects */
-button, nav a {
-    transition: 0.3s;
-    box-shadow: 0 0 10px transparent;
-}
-
-button:hover, nav a:hover {
-    box-shadow: 0 0 15px #ff4d94;
-    transform: scale(1.05);
-}
-/* Falling Hearts Animation */
-@keyframes fall {
-    0% { 
-        transform: translateY(-100px) scale(1); 
-        opacity: 1; 
-    }
-    100% { 
-        transform: translateY(100vh) scale(0.5); 
-        opacity: 0; 
-    }
-}
-
-.heart {
-    position: fixed;
-    top: 0;
-    left: 0;
-    color: red;
-    font-size: 20px;
-    animation: fall linear infinite;
-  
-
-
-
