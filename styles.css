@@ -1,26 +1,47 @@
-/* Basic Styles */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
-    color: #333;
+/* Basic Reset */
+* {
     margin: 0;
     padding: 0;
-    text-align: center;
+    box-sizing: border-box;
 }
 
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header Styling */
 header {
     background-color: #ff66b2;
     color: white;
-    padding: 20px;
+    padding: 30px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    margin-top: 10px;
 }
 
 #countdown {
-    font-size: 18px;
+    font-size: 1.3rem;
+    margin-top: 10px;
+}
+
+#custom-countdown {
+    margin-top: 20px;
 }
 
 #countdown-date {
-    padding: 5px;
-    margin-right: 10px;
+    padding: 8px;
+    margin-top: 10px;
 }
 
 #set-countdown {
@@ -30,61 +51,101 @@ header {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 10px;
 }
 
-/* Love Letter Styles */
-#love-letter {
-    display: none;
-    background: #ffe6f7;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    color: #d63384;
-    font-size: 18px;
-    text-align: left;
-    margin: 20px auto;
-    width: 80%;
+/* Love Letter Section */
+#love-letter-section {
+    text-align: center;
+    margin: 20px;
 }
 
 #hidden-button {
-    padding: 10px 15px;
+    padding: 15px 25px;
     background-color: #ff66b2;
     color: white;
     border: none;
-    border-radius: 50px;
-    font-size: 16px;
+    border-radius: 25px;
+    font-size: 1.2rem;
     cursor: pointer;
 }
 
-/* Show Days and Tabs */
-#tabs-container {
+#love-letter {
     display: none;
-    background: #ffb3b3;
-    padding: 10px;
-    border-radius: 5px;
-    margin-top: 10px;
+    background-color: #ffe6f7;
+    color: #d63384;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+#close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ff4d94;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+#close-button:hover {
+    background-color: #ff3399;
+}
+
+/* Show Days and Tab Buttons */
+#valentines-menu {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
 }
 
 .tab-button {
-    background: #ff66b2;
+    background-color: #ff66b2;
     color: white;
     border: none;
-    padding: 10px;
-    margin: 5px;
+    padding: 12px 20px;
+    margin: 0 10px;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1.1rem;
+}
+
+.tab-button:hover {
+    background-color: #ff4d94;
+}
+
+/* Tab Content */
+#tabs-container {
+    display: none;
+    margin-top: 20px;
 }
 
 .tab-content {
     display: none;
+    background-color: #fff;
     padding: 20px;
-    background-color: #ffe6f7;
-    border-radius: 10px;
-    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Rose Day Specific Styling */
+#rose-day {
+    text-align: left;
+}
+
+.rose-bouquets {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
 .rose-bouquets img {
     width: 150px;
     height: 150px;
@@ -92,9 +153,12 @@ header {
 }
 
 #rose-day p {
-    text-align: left;
+    font-size: 1.1rem;
+    line-height: 1.8;
 }
 
+/* Photo Collage Styling */
 #photo-collage {
+    text-align: center;
     margin-top: 30px;
 }
