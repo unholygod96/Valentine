@@ -1,4 +1,4 @@
-// Toggle the visibility of the Show Days tab
+// Show the "Show Days" dropdown
 document.getElementById('show-menu').addEventListener('click', function() {
     var tabsContainer = document.getElementById('tabs-container');
     tabsContainer.style.display = (tabsContainer.style.display === 'none' || tabsContainer.style.display === '') ? 'block' : 'none';
@@ -17,12 +17,12 @@ tabButtons.forEach(function(button) {
     });
 });
 
-// Show Love Letter
+// Show the love letter
 document.getElementById('hidden-button').addEventListener('click', function() {
     document.getElementById('love-letter').style.display = 'block';
 });
 
-// Close Love Letter
+// Close the love letter
 document.getElementById('close-button').addEventListener('click', function() {
     document.getElementById('love-letter').style.display = 'none';
 });
