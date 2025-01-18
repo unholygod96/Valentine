@@ -118,4 +118,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Generate Hearts Every 0.5 Seconds
 setInterval(createHeart, 500);
+function createHeart() {
+    const heart = document.createElement("div");
+    heart.innerHTML = "❤️";
+    heart.classList.add("heart");
+
+    // Randomize heart size
+    const size = Math.random() * 10 + 10 + "px"; // Hearts range between 10px and 20px
+    heart.style.fontSize = size;
+
+    // Random position across the entire screen width
+    heart.style.left = Math.random() * window.innerWidth + "px";
+
+    // Random animation duration for variety
+    heart.style.animationDuration = Math.random() * 5 + 3 + "s"; // Between 3s and 8s
+    heart.style.animationTimingFunction = "ease-in-out"; // Smooth movement
+
+    document.body.appendChild(heart);
+
+    // Remove hearts after animation ends
+    setTimeout(() => {
+        heart.remove();
+    }, 8000);
+}
+
+// Generate hearts every 0.3 seconds
+setInterval(createHeart, 300);
 
