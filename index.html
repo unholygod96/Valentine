@@ -64,7 +64,28 @@
 <section id="valentines-week">
     <div class="tab-content" id="rose-day" style="display: none;">
         <h2>Rose Day 🌹</h2>
-        <p>Roses are red, violets are blue, my heart is filled with love for you!</p>
+        <div style="text-align: center; margin-bottom: 20px;">
+            <!-- Virtual Bouquets and Flowers -->
+            <img src="images/rose1.jpg" alt="Rose Bouquet" style="width: 150px; margin: 10px;">
+            <img src="images/rose2.jpg" alt="Rose Bouquet" style="width: 150px; margin: 10px;">
+            <img src="images/rose3.jpg" alt="Rose Bouquet" style="width: 150px; margin: 10px;">
+            <img src="images/rose4.jpg" alt="Rose Bouquet" style="width: 150px; margin: 10px;">
+            <img src="images/rose5.jpg" alt="Rose Bouquet" style="width: 150px; margin: 10px;">
+            <img src="images/rose6.jpg" alt="Rose Bouquet" style="width: 150px; margin: 10px;">
+        </div>
+        <p style="font-size: 18px; text-align: center; color: #d63384; padding: 0 20px;">
+            You remind me so much of roses, my love. 🌹 Just like a rose, your beauty captivates everyone around you with its pure elegance. 
+            The way you shine, even on the cloudiest days, makes my heart bloom in ways I never thought possible.
+        </p>
+        <p style="font-size: 18px; text-align: center; color: #d63384; padding: 0 20px;">
+            Just as roses have petals that are soft and delicate, your kindness and grace make everyone around you feel loved and appreciated. 
+            You are my constant source of joy and the most beautiful person, inside and out, that I have ever known. 
+            Every time I see a rose, I think of you, and I’m reminded of how incredibly blessed I am to have you in my life. 
+            You're more stunning than any flower, and your love fills me with warmth and happiness every single day.
+        </p>
+        <p style="font-size: 18px; text-align: center; color: #d63384; padding: 0 20px;">
+            Happy Rose Day to the one who fills my life with beauty, love, and grace, just like a rose. 🌹💖
+        </p>
     </div>
     <div class="tab-content" id="propose-day" style="display: none;">
         <h2>Propose Day 💍</h2>
@@ -84,87 +105,6 @@
     </div>
 </section>
 
-<script>
-// Show/Hide menu functionality
-const showMenuButton = document.getElementById('show-menu');
-const tabsContainer = document.getElementById('tabs-container');
-showMenuButton.addEventListener('click', () => {
-    if (tabsContainer.style.display === 'none') {
-        tabsContainer.style.display = 'block';
-    } else {
-        tabsContainer.style.display = 'none';
-    }
-});
-
-// Tab switching functionality
-const tabButtons = document.querySelectorAll('.tab-button');
-const tabContents = document.querySelectorAll('.tab-content');
-tabButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const tab = button.dataset.tab;
-        tabContents.forEach(content => {
-            content.style.display = content.id === tab ? 'block' : 'none';
-        });
-    });
-});
-
-// Open Love Letter functionality
-const loveLetterButton = document.getElementById('hidden-button');
-const loveLetter = document.getElementById('love-letter');
-const closeButton = document.getElementById('close-button');
-
-loveLetterButton.addEventListener('click', () => {
-    loveLetter.style.display = 'block';
-});
-
-closeButton.addEventListener('click', () => {
-    loveLetter.style.display = 'none';
-});
-
-// Countdown functionality
-const countdownDateInput = document.getElementById('countdown-date');
-const setCountdownButton = document.getElementById('set-countdown');
-const timerElement = document.getElementById('timer');
-
-setCountdownButton.addEventListener('click', () => {
-    const countdownDate = new Date(countdownDateInput.value).getTime();
-    
-    if (!countdownDate) return; // No date selected
-    
-    const countdownInterval = setInterval(() => {
-        const now = new Date().getTime();
-        const distance = countdownDate - now;
-        
-        if (distance < 0) {
-            clearInterval(countdownInterval);
-            timerElement.innerHTML = "EXPIRED";
-        } else {
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-        }
-    }, 1000);
-});
-
-// Photo collage functionality
-const photoUpload = document.getElementById('photo-upload');
-const collageArea = document.getElementById('collage');
-
-photoUpload.addEventListener('change', (event) => {
-    const files = event.target.files;
-    collageArea.innerHTML = ''; // Clear existing images
-    
-    for (let i = 0; i < files.length; i++) {
-        const image = document.createElement('img');
-        image.src = URL.createObjectURL(files[i]);
-        image.style.width = '100px';
-        image.style.margin = '5px';
-        collageArea.appendChild(image);
-    }
-});
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
