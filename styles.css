@@ -1,123 +1,41 @@
-/* General Styling */
-body {
-    background-color: #ffe6e6;
-    font-family: 'Arial', sans-serif;
-    text-align: center;
-    color: #d63384;
-    margin: 0;
-    padding: 0;
+.hidden {
+    display: none !important;
 }
 
-/* Header Styling */
-header {
-    background-color: #ffb3b3;
-    padding: 20px;
-    font-size: 24px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Countdown Section */
+/* Improve countdown styling */
 #countdown-container {
-    text-align: center;
-    padding: 20px;
-}
-
-/* Hide menu initially and position it below the menu button */
-nav {
-    display: none;
-    background: #ff66b2;
-    padding: 10px;
-    text-align: center;
-    border-radius: 10px;
-    position: absolute;
-    top: 50px;
-    left: 10px;
-    width: 200px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-/* Rose Day Styling */
-#rose-day {
-    background-image: url('https://imgur.com/PAhioge.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 50px;
-    text-align: center;
-    color: white;
-    display: none;
-}
-
-#rose-day p {
-    font-size: 18px;
-    max-width: 80%;
-    margin: 0 auto;
-}
-
-/* Navigation Buttons */
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-nav ul li {
-    margin: 5px 0;
-}
-
-nav a {
-    text-decoration: none;
-    color: white;
-    font-size: 18px;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #e60073;
-    transition: 0.3s;
-    display: block;
-}
-
-nav a:hover {
-    background-color: #ff3385;
-}
-
-/* Love letter button (bottom-right) */
-#love-letter-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #ff4d94;
-    color: white;
-    padding: 15px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 22px;
-    z-index: 1000;
-}
-
-/* Hide love letter content initially */
-#love-letter {
-    display: none;
-    padding: 20px;
     background: white;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-    color: #d63384;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    margin-top: 15px;
 }
 
-/* Hide tab content by default */
-.tab-content {
-    display: none;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px;
+#countdown-input {
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #e60073;
 }
 
-/* Show active tab */
-.active {
-    display: block;
+#countdown {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Improve button styling */
+.styled-button {
+    background-color: #ff4d94;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.styled-button:hover {
+    background-color: #e60073;
 }
