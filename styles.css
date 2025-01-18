@@ -22,18 +22,31 @@ header {
     padding: 20px;
 }
 
-/* Navigation Menu */
+/* Hide menu initially */
+nav {
+    display: none;
+    background: #ff66b2;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    position: absolute;
+    top: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Navigation Buttons */
 nav ul {
     list-style: none;
     padding: 0;
-    background: #ff66b2;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
 nav ul li {
-    display: inline;
-    margin: 10px;
+    margin: 5px;
 }
 
 nav a {
@@ -44,6 +57,7 @@ nav a {
     border-radius: 5px;
     background-color: #e60073;
     transition: 0.3s;
+    display: inline-block;
 }
 
 nav a:hover {
@@ -81,29 +95,4 @@ nav a:hover {
     cursor: pointer;
     font-size: 22px;
     z-index: 1000;
-}
-
-/* Hide tab content by default */
-.tab-content {
-    display: none;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 20px;
-}
-
-/* Rose Day Background */
-#rose-day {
-    background-image: url('https://imgur.com/PAhioge.jpg');
-    background-size: cover;
-    background-position: center;
-    padding: 50px;
-    text-align: center;
-    color: white;
-}
-
-/* Show active tab */
-.active {
-    display: block;
 }
