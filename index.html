@@ -4,197 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valentine's Day Surprise</title>
-    <style>
-        /* Basic Styles */
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f8f8;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-        }
-
-        header {
-            background-color: #ff66b2;
-            color: white;
-            padding: 20px;
-        }
-
-        #countdown {
-            font-size: 18px;
-        }
-
-        #countdown-date {
-            padding: 5px;
-            margin-right: 10px;
-        }
-
-        #set-countdown {
-            padding: 8px 16px;
-            background-color: #ff66b2;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        /* Love Letter Styles */
-        #love-letter {
-            display: none;
-            background: #ffe6f7;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            color: #d63384;
-            font-size: 18px;
-            text-align: left;
-            margin: 20px auto;
-            width: 80%;
-        }
-
-        #hidden-button {
-            padding: 10px 15px;
-            background-color: #ff66b2;
-            color: white;
-            border: none;
-            border-radius: 50px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        /* Show Days and Tabs */
-        #tabs-container {
-            display: none;
-            background: #ffb3b3;
-            padding: 10px;
-            border-radius: 5px;
-            margin-top: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .tab-button {
-            background: #ff66b2;
-            color: white;
-            border: none;
-            padding: 10px;
-            margin: 5px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .tab-content {
-            display: none;
-            padding: 20px;
-            background-color: #ffe6f7;
-            border-radius: 10px;
-            margin: 10px 0;
-        }
-
-        /* Rose Day Specific Styling */
-        .rose-bouquets img {
-            width: 150px;
-            height: 150px;
-            margin: 10px;
-        }
-
-        #rose-day p {
-            text-align: left;
-        }
-
-        #photo-collage {
-            margin-top: 30px;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
-    <h1>Happy Valentine's Week ❤️</h1>
-    <div id="countdown">
-        <h2>Countdown for you to be my Valentine 💖</h2>
-        <span id="timer">00d 00h 00m 00s</span>
-    </div>
-    <div id="custom-countdown">
-        <label for="countdown-date">Set Your Countdown:</label>
-        <input type="datetime-local" id="countdown-date" />
-        <button id="set-countdown">Set Countdown</button>
-    </div>
-</header>
+    <header>
+        <h1>Happy Valentine's Week ❤️</h1>
+        <div id="countdown">Countdown: <span id="timer"></span></div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#rose-day">Rose Day</a></li>
+            <li><a href="#propose-day">Propose Day</a></li>
+            <li><a href="#chocolate-day">Chocolate Day</a></li>
+            <li><a href="#teddy-day">Teddy Day</a></li>
+            <li><a href="#promise-day">Promise Day</a></li>
+            <li><a href="#hug-day">Hug Day</a></li>
+            <li><a href="#kiss-day">Kiss Day</a></li>
+            <li><a href="#valentines-day">Valentine's Day</a></li>
+            <li><a href="#photo-collage">Photo Collage</a></li>
+        </ul>
+    </nav>
 
-<div id="love-letter-section">
-    <button id="hidden-button">Open Love Letter ❤️</button>
-    <div id="love-letter">
-        <button id="close-button">×</button>
-        <p>Happy Valentine's Day! 💕</p>
-        <p>Your smile lights up my world like nothing else...</p>
-        <p>You are the best thing that has ever happened to me...</p>
-    </div>
-</div>
-
-<nav>
-    <div id="valentines-menu">
-        <button id="show-menu" class="tab-button">Show Days</button>
-        <div id="tabs-container">
-            <button class="tab-button" data-tab="rose-day">Rose Day</button>
-            <button class="tab-button" data-tab="propose-day">Propose Day</button>
-            <button class="tab-button" data-tab="chocolate-day">Chocolate Day</button>
+    <section id="valentines-week">
+        <div class="tab-content" id="rose-day">
+            <h2>Rose Day 🌹</h2>
+            <p>Roses are red, violets are blue, my heart is filled with love for you!</p>
+            <img src="images/rose-day.jpg" alt="Rose Day">
         </div>
-    </div>
-</nav>
-
-<section id="valentines-week">
-    <div class="tab-content" id="rose-day">
-        <h2>Rose Day 🌹</h2>
-        <div class="rose-bouquets">
-            <img src="https://via.placeholder.com/150x150/FF66B2/FFFFFF?text=Rose+Bouquet" alt="Bouquet 1">
-            <img src="https://via.placeholder.com/150x150/FF66B2/FFFFFF?text=Rose+Bouquet" alt="Bouquet 2">
-            <img src="https://via.placeholder.com/150x150/FF66B2/FFFFFF?text=Rose+Bouquet" alt="Bouquet 3">
-            <img src="https://via.placeholder.com/150x150/FF66B2/FFFFFF?text=Rose+Bouquet" alt="Bouquet 4">
-            <img src="https://via.placeholder.com/150x150/FF66B2/FFFFFF?text=Rose+Bouquet" alt="Bouquet 5">
-            <img src="https://via.placeholder.com/150x150/FF66B2/FFFFFF?text=Rose+Bouquet" alt="Bouquet 6">
+        <div class="tab-content" id="propose-day">
+            <h2>Propose Day 💍</h2>
+            <p>From the moment I met you, I knew my heart belonged to you.</p>
+            <button onclick="showProposal()">Click for a Surprise</button>
         </div>
-        <p>
-            You remind me so much of roses—your beauty, your grace, and your warmth. Like a rose, you are delicate yet strong, and you bloom in every way imaginable. The way your smile lights up my world is like a bouquet of roses—vibrant, fresh, and full of love.
-        </p>
-        <p>
-            Just like roses need care to grow, you nurture my heart and soul with your love. You are my precious flower, the one I want to cherish and hold close forever. Every moment with you is like a petal unfolding, revealing more beauty than I could ever describe.
-        </p>
-        <p>
-            You are the most beautiful rose in my garden, and I will always admire you, love you, and cherish you, just as I would the most beautiful flower in the world. 💖
-        </p>
-    </div>
-</section>
+        <!-- Add other days similarly -->
+    </section>
 
-<script>
-    // Toggle the visibility of the Show Days tab
-    document.getElementById('show-menu').addEventListener('click', function() {
-        var tabsContainer = document.getElementById('tabs-container');
-        tabsContainer.style.display = (tabsContainer.style.display === 'none' || tabsContainer.style.display === '') ? 'block' : 'none';
-    });
+    <section id="photo-collage">
+        <h2>Our Memories Together 📸</h2>
+        <div id="collage-area">
+            <input type="file" id="photo-upload" multiple>
+            <div id="collage"></div>
+        </div>
+    </section>
 
-    // Show selected tab content
-    var tabButtons = document.querySelectorAll('.tab-button');
-    tabButtons.forEach(function(button) {
-        button.addEventListener('click', function() {
-            var tabId = this.getAttribute('data-tab');
-            var tabs = document.querySelectorAll('.tab-content');
-            tabs.forEach(function(tab) {
-                tab.style.display = 'none';
-            });
-            document.getElementById(tabId).style.display = 'block';
-        });
-    });
+    <section id="proposal">
+        <h2>A Special Question 💖</h2>
+        <p>Click the stars to reveal the message...</p>
+        <div id="hidden-message">Will you be my Valentine? ❤️</div>
+    </section>
 
-    // Show Love Letter
-    document.getElementById('hidden-button').addEventListener('click', function() {
-        document.getElementById('love-letter').style.display = 'block';
-    });
-
-    // Close Love Letter
-    document.getElementById('close-button').addEventListener('click', function() {
-        document.getElementById('love-letter').style.display = 'none';
-    });
-</script>
-
+    <script src="script.js"></script>
 </body>
 </html>
