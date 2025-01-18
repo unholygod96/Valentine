@@ -8,11 +8,19 @@
 </head>
 <body>
     <header>
-        <h1>Happy Valentine's Week ❤️</h1>
-        <div id="countdown">Countdown: <span id="timer"></span></div>
-    </header>
-    
-   <div id="love-letter-section">
+    <h1>Happy Valentine's Week ❤️</h1>
+    <div id="countdown">
+        <h2>Countdown for you to be my Valentine 💖</h2>
+        <span id="timer">00d 00h 00m 00s</span>
+    </div>
+    <div id="custom-countdown">
+        <label for="countdown-date">Set Your Countdown:</label>
+        <input type="datetime-local" id="countdown-date" />
+        <button id="set-countdown" style="background-color: #ff66b2; color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer;">Set Countdown</button>
+    </div>
+</header>
+
+ <div id="love-letter-section">
     <button id="hidden-button" style="display: inline-block; position: absolute; bottom: 20px; right: 20px; background: #ff66b2; color: white; border: none; padding: 10px 15px; border-radius: 50px; cursor: pointer; font-size: 16px; box-shadow: 0 0 15px #ff99c2;">
         Open Love Letter ❤️
     </button>
