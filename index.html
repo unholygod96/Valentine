@@ -5,6 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valentine's Day Surprise</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Ensure top-left buttons are positioned correctly */
+        #top-left-buttons {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            display: flex;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .styled-button {
+            background-color: #ff4d94;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 18px;
+        }
+
+        /* Ensure love letter button remains bottom-right */
+        #love-letter-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #ff4d94;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 22px;
+            z-index: 1000;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -18,8 +52,8 @@
     </header>
     
     <div id="top-left-buttons">
-        <button id="menu-button" class="styled-button top-left">☰</button>
-        <button id="toggle-music" class="styled-button top-left">🎵</button>
+        <button id="menu-button" class="styled-button">☰</button>
+        <button id="toggle-music" class="styled-button">🎵</button>
     </div>
     
     <audio id="background-music" loop>
@@ -41,7 +75,7 @@
     </nav>
     
     <div id="love-letter-container">
-        <button id="love-letter-button" class="styled-button bottom-right">💌</button>
+        <button id="love-letter-button" class="styled-button">💌</button>
         <div id="love-letter" class="hidden love-box">
             <p><strong>Happy Valentine's Day! ❤️</strong></p>
             <p>Idk when you are seeing this, but thank you for being such an amazing girlfriend.</p>
