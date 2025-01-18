@@ -144,4 +144,20 @@ function createHeart() {
 
 // Generate hearts every 0.3 seconds
 setInterval(createHeart, 300);
+document.addEventListener("DOMContentLoaded", function () {
+    // Hidden Love Letter Button Logic
+    const loveLetterButton = document.getElementById("hidden-button");
+    const loveLetter = document.getElementById("love-letter");
+    const closeButton = document.getElementById("close-button");
+
+    loveLetterButton.addEventListener("click", function () {
+        loveLetter.style.display = "block";
+        this.style.display = "none"; // Hide "Open Love Letter" button
+    });
+
+    closeButton.addEventListener("click", function () {
+        loveLetter.style.display = "none";
+        loveLetterButton.style.display = "inline-block"; // Show "Open Love Letter" button again
+    });
+});
 
