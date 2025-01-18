@@ -10,48 +10,25 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Ensure "Rose Day" tab is shown on page load
+    // Default tab
     showTab('rose-day');
 
-    // Assign tab switching functionality to nav links
-    document.querySelectorAll("nav a").forEach(link => {
-        link.addEventListener("click", function (event) {
-            event.preventDefault();
-            let tabId = this.getAttribute("href").substring(1); // Remove # from href
-            showTab(tabId);
-        });
-    });
-
-    // Toggle menu visibility
+    // Navigation Functionality
     document.getElementById("menu-button").addEventListener("click", function () {
         let menu = document.getElementById("side-menu");
-        menu.classList.toggle("hidden");
-    });
-
-    // Hide the menu initially
-    document.getElementById("side-menu").classList.add("hidden");
-
-    // Toggle love letter visibility
-    document.getElementById("love-letter-button").addEventListener("click", function () {
-        let loveLetter = document.getElementById("love-letter");
-        loveLetter.classList.toggle("hidden");
-    });
-
-    // Toggle background music
-    let music = document.getElementById("background-music");
-    let musicToggleButton = document.getElementById("toggle-music");
-
-    musicToggleButton.addEventListener("click", function () {
-        if (music.paused) {
-            music.play();
-            this.textContent = "🔇";  // Update button to show mute option
+        if (menu.classList.contains("menu-open")) {
+            menu.classList.remove("menu-open");
         } else {
-            music.pause();
-            this.textContent = "🎵";  // Update button to show play option
+            menu.classList.add("menu-open");
         }
     });
 
-    // Countdown Timer Logic
+    // Love Letter Toggle
+    document.getElementById("love-letter-button").addEventListener("click", function () {
+        document.getElementById("love-letter").classList.toggle("hidden");
+    });
+
+    // Countdown Timer
     document.getElementById("set-countdown").addEventListener("click", function () {
         let userTime = document.getElementById("countdown-input").value;
         if (!userTime) return;
