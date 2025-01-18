@@ -14,55 +14,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     startCountdown();
 
-    // Toggle Tabs Visibility
-    document.querySelectorAll("nav a").forEach(link => {
-        link.addEventListener("click", function (e) {
-            e.preventDefault();
-            let targetId = this.getAttribute("href").substring(1);
-            document.querySelectorAll(".tab-content").forEach(tab => {
-               tab.classList.remove("active");
-               if (tab.id === targetId) {
-                  tab.classList.add("active");
-               }
-            });       
-        });
-    });
-
-    // Surprise Proposal Animation
-    document.getElementById("proposal").addEventListener("click", function () {
-        document.getElementById("hidden-message").style.display = "block";
-    });
-
-    // Photo Collage Uploader
-    document.getElementById("photo-upload").addEventListener("change", function (event) {
-        let collageArea = document.getElementById("collage");
-        collageArea.innerHTML = ""; // Clear previous images
-        Array.from(event.target.files).forEach(file => {
-            let img = document.createElement("img");
-            img.src = URL.createObjectURL(file);
-            img.style.width = "150px";
-            img.style.margin = "10px";
-            img.style.borderRadius = "10px";
-            collageArea.appendChild(img);
-        });
+    // Toggle Music
+    document.getElementById("toggle-music").addEventListener("click", function () {
+        let music = document.getElementById("background-music");
+        if (music.paused) {
+            music.play();
+        } else {
+            music.pause();
+        }
     });
 });
-// Falling Hearts Effect
-function createHeart() {
-    const heart = document.createElement("div");
-    heart.innerHTML = "❤️";
-    heart.classList.add("heart");
-    document.body.appendChild(heart);
-
-    // Random Position & Animation Speed
-    heart.style.left = Math.random() * window.innerWidth + "px";
-    heart.style.animationDuration = Math.random() * 3 + 2 + "s"; // Random speed
-
-    setTimeout(() => {
-        heart.remove();
-    }, 5000);
-}
-
-// Generate Hearts Every 0.5 Seconds
-setInterval(createHeart, 500);
-
