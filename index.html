@@ -17,11 +17,14 @@
         </div>
     </header>
     
-    <button id="menu-button" class="styled-button top-left">☰</button>
+    <div id="top-left-buttons" class="button-container">
+        <button id="menu-button" class="styled-button">☰</button>
+        <button id="toggle-music" class="styled-button">🎵</button>
+    </div>
+    
     <audio id="background-music" loop>
         <source src="double-take.mp3" type="audio/mpeg">
     </audio>
-    <button id="toggle-music" class="styled-button">🎵</button>
     
     <nav id="side-menu" class="hidden">
         <ul>
@@ -36,21 +39,6 @@
             <li><a href="#photo-collage">Photo Collage</a></li>
         </ul>
     </nav>
-
-    <!-- Hidden Love Letter Button -->
-    <div id="love-letter-container" class="hidden-heart">
-        <button id="love-letter-button" class="styled-button">💌</button>
-        <div id="love-letter" class="hidden love-box">
-            <p><strong>Happy Valentine's Day! ❤️</strong></p>
-            <p>Idk when you are seeing this, but thank you for being such an amazing girlfriend.</p>
-            <p>I love you so much and miss you deeply. I can't wait to see you again.</p>
-            <p>You are the best thing that has ever happened to me, and I don't know what I would do without you.</p>
-            <p>Your smile brightens my darkest days, and your laughter is the sweetest melody.</p>
-            <p>Every moment with you is a gift, and I cherish all our memories together.</p>
-            <p>You are my safe haven, my love, my forever. No matter where life takes us, my heart will always belong to you.</p>
-            <p>I love you endlessly. 💖</p>
-        </div>
-    </div>
     
     <script src="script.js"></script>
 </body>
