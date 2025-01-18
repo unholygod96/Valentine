@@ -56,6 +56,7 @@
             <button class="tab-button" data-tab="rose-day" style="background: #ff66b2; color: white; border: none; padding: 10px; margin: 5px; border-radius: 5px; cursor: pointer;">Rose Day</button>
             <button class="tab-button" data-tab="propose-day" style="background: #ff66b2; color: white; border: none; padding: 10px; margin: 5px; border-radius: 5px; cursor: pointer;">Propose Day</button>
             <button class="tab-button" data-tab="chocolate-day" style="background: #ff66b2; color: white; border: none; padding: 10px; margin: 5px; border-radius: 5px; cursor: pointer;">Chocolate Day</button>
+            <!-- Add buttons for other days -->
         </div>
     </div>
 </nav>
@@ -64,35 +65,25 @@
     <div class="tab-content" id="rose-day" style="display: none;">
         <h2>Rose Day 🌹</h2>
         <p>Roses are red, violets are blue, my heart is filled with love for you!</p>
-        
-        <div id="bouquet">
-            <img src="https://via.placeholder.com/150?text=Rose+Bouquet" alt="Rose Bouquet">
-            <img src="https://via.placeholder.com/150?text=Rose+Bouquet" alt="Rose Bouquet">
-            <img src="https://via.placeholder.com/150?text=Rose+Bouquet" alt="Rose Bouquet">
-            <img src="https://via.placeholder.com/150?text=Rose+Bouquet" alt="Rose Bouquet">
-            <img src="https://via.placeholder.com/150?text=Rose+Bouquet" alt="Rose Bouquet">
-            <img src="https://via.placeholder.com/150?text=Rose+Bouquet" alt="Rose Bouquet">
-            <img src="https://via.placeholder.com/150?text=Rose+Bouquet" alt="Rose Bouquet">
-            <img src="https://via.placeholder.com/150?text=Rose+Bouquet" alt="Rose Bouquet">
+        <div style="display: flex; flex-wrap: wrap; gap: 15px;">
+            <img src="https://via.placeholder.com/150x150/FF66B2/FFFFFF?text=Rose+Bouquet" alt="Bouquet 1">
+            <img src="https://via.placeholder.com/150x150/FF66B2/FFFFFF?text=Rose+Bouquet" alt="Bouquet 2">
+            <img src="https://via.placeholder.com/150x150/FF66B2/FFFFFF?text=Rose+Bouquet" alt="Bouquet 3">
+            <img src="https://via.placeholder.com/150x150/FF66B2/FFFFFF?text=Rose+Bouquet" alt="Bouquet 4">
+            <img src="https://via.placeholder.com/150x150/FF66B2/FFFFFF?text=Rose+Bouquet" alt="Bouquet 5">
+            <img src="https://via.placeholder.com/150x150/FF66B2/FFFFFF?text=Rose+Bouquet" alt="Bouquet 6">
         </div>
-
         <p>
-            Just like roses, you radiate beauty, grace, and love. Every petal of a rose reminds me of how your kindness, your laughter, and your warmth brighten my life. You are like a rare rose that blooms only once in a lifetime, and I am so lucky to have found you. Your smile is like the soft petals that dance in the breeze, your presence like the sweet fragrance that fills the air.
+            You remind me so much of roses—your beauty, your grace, and your warmth. Like a rose, you are delicate yet strong, and you bloom in every way imaginable. The way your smile lights up my world is like a bouquet of roses—vibrant, fresh, and full of love. Each time I see you, I feel like I’m receiving the most beautiful flower in the world.
         </p>
-        
         <p>
-            Your beauty is not just in the way you look, but in the way you make me feel. Your eyes shine like the dewdrops on the rose petals at dawn, and your heart is pure like the softest rose. You remind me of how roses have a unique grace, where every twist and turn tells a story of resilience, love, and beauty. 
+            Just like roses need care to grow, you nurture my heart and soul with your love. You are my precious flower, the one I want to cherish and hold close forever. Every moment with you is like a petal unfolding, revealing more beauty than I could ever describe. The way you make me feel is beyond words—just like the fragrance of roses, your presence fills every corner of my life with sweetness and joy.
         </p>
-        
         <p>
-            The way you care for everyone around you is like a garden of roses in full bloom, always giving and nurturing, spreading joy wherever you go. I want to give you my heart, just as you are my everything. 
-        </p>
-
-        <p>
-            Thank you for being my beautiful rose, for filling my life with color, fragrance, and warmth. You are my forever love, and nothing in this world compares to how much I cherish you. 💖
+            You are the most beautiful rose in my garden, and I will always admire you, love you, and cherish you, just as I would the most beautiful flower in the world. 💖
         </p>
     </div>
-    <!-- Other Day Contents (Propose Day, Chocolate Day) -->
+    <!-- Add other days here -->
 </section>
 
 <section id="photo-collage">
@@ -103,30 +94,6 @@
     </div>
 </section>
 
-<script>
-    // JavaScript for Show Days Button
-    document.getElementById('show-menu').addEventListener('click', function () {
-        var tabsContainer = document.getElementById('tabs-container');
-        if (tabsContainer.style.display === 'none') {
-            tabsContainer.style.display = 'block';
-        } else {
-            tabsContainer.style.display = 'none';
-        }
-    });
-
-    // JavaScript for Tabs functionality
-    var tabButtons = document.querySelectorAll('.tab-button');
-    tabButtons.forEach(function (button) {
-        button.addEventListener('click', function () {
-            var tabContent = document.querySelectorAll('.tab-content');
-            tabContent.forEach(function (content) {
-                content.style.display = 'none';
-            });
-            var activeTab = document.getElementById(button.getAttribute('data-tab'));
-            activeTab.style.display = 'block';
-        });
-    });
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
