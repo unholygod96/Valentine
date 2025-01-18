@@ -1,70 +1,36 @@
-/* General Styling */
-body {
-    background-color: #ffe6e6;
-    font-family: 'Arial', sans-serif;
+/* Rose Day Background */
+#rose-day {
+    background-image: url('https://imgur.com/PAhioge.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 50px;
     text-align: center;
-    color: #d63384;
-    margin: 0;
-    padding: 0;
+    color: white;
 }
 
-/* Header Styling */
-header {
-    background-color: #ffb3b3;
-    padding: 20px;
-    font-size: 24px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Bouquet Styling */
+.bouquet-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
 }
 
-/* Hidden Elements */
-.hidden {
-    display: none;
+.bouquet {
+    width: 150px;
+    height: auto;
 }
 
-/* Love Letter Box */
-.love-box {
-    background: #ffebf2;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(255, 0, 102, 0.5);
-    max-width: 400px;
-    margin: auto;
-}
-
-/* Love Letter Button (Hidden but Pretty) */
-.hidden-heart {
+/* Ensure top-left buttons are positioned correctly */
+#top-left-buttons {
     position: fixed;
-    bottom: 15px;
-    right: 15px;
-    opacity: 0.6;
-    transition: opacity 0.3s ease-in-out;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    gap: 10px;
+    z-index: 1000;
 }
 
-.hidden-heart:hover {
-    opacity: 1;
-}
-
-/* Countdown Section */
-#countdown-container {
-    text-align: center;
-    padding: 20px;
-}
-
-#countdown-input {
-    padding: 5px;
-    font-size: 16px;
-    border: 2px solid #ff4d94;
-    border-radius: 5px;
-    margin-right: 10px;
-}
-
-#countdown {
-    font-size: 18px;
-    font-weight: bold;
-    margin-top: 10px;
-}
-
-/* Styled Buttons */
 .styled-button {
     background-color: #ff4d94;
     color: white;
@@ -74,30 +40,16 @@ header {
     font-size: 18px;
 }
 
-/* Navigation Menu */
-nav ul {
-    list-style: none;
-    padding: 0;
-    background: #ff66b2;
-    display: flex;
-    justify-content: center;
-}
-
-nav ul li {
-    display: inline;
-    margin: 10px;
-}
-
-nav a {
-    text-decoration: none;
+/* Ensure love letter button remains bottom-right */
+#love-letter-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #ff4d94;
     color: white;
-    font-size: 18px;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #e60073;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    background-color: #ff3385;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 22px;
+    z-index: 1000;
 }
