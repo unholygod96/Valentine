@@ -16,6 +16,34 @@ header {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Hidden Elements */
+.hidden {
+    display: none;
+}
+
+/* Love Letter Box */
+.love-box {
+    background: #ffebf2;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 0, 102, 0.5);
+    max-width: 400px;
+    margin: auto;
+}
+
+/* Love Letter Button (Hidden but Pretty) */
+.hidden-heart {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    opacity: 0.6;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.hidden-heart:hover {
+    opacity: 1;
+}
+
 /* Countdown Section */
 #countdown-container {
     text-align: center;
@@ -34,20 +62,6 @@ header {
     font-size: 18px;
     font-weight: bold;
     margin-top: 10px;
-}
-
-/* Move Menu Button to Top Left */
-.top-left {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    background: #ff4d94;
-    color: white;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 18px;
-    z-index: 1000;
 }
 
 /* Styled Buttons */
