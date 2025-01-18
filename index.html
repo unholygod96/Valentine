@@ -72,6 +72,12 @@
             <img src="images/rose4.jpg" alt="Rose Bouquet" style="width: 150px; margin: 10px;">
             <img src="images/rose5.jpg" alt="Rose Bouquet" style="width: 150px; margin: 10px;">
             <img src="images/rose6.jpg" alt="Rose Bouquet" style="width: 150px; margin: 10px;">
+            <img src="images/rose7.jpg" alt="Rose Bouquet" style="width: 150px; margin: 10px;">
+            <img src="images/rose8.jpg" alt="Rose Bouquet" style="width: 150px; margin: 10px;">
+            <img src="images/rose9.jpg" alt="Rose Bouquet" style="width: 150px; margin: 10px;">
+            <img src="images/rose10.jpg" alt="Rose Bouquet" style="width: 150px; margin: 10px;">
+            <img src="images/rose11.jpg" alt="Rose Bouquet" style="width: 150px; margin: 10px;">
+            <img src="images/rose12.jpg" alt="Rose Bouquet" style="width: 150px; margin: 10px;">
         </div>
         <p style="font-size: 18px; text-align: center; color: #d63384; padding: 0 20px;">
             You remind me so much of roses, my love. 🌹 Just like a rose, your beauty captivates everyone around you with its pure elegance. 
@@ -105,28 +111,6 @@
     </div>
 </section>
 
-<script>
-// JavaScript for the "Show Days" button
-document.getElementById('show-menu').addEventListener('click', function() {
-    const tabsContainer = document.getElementById('tabs-container');
-    if (tabsContainer.style.display === 'none' || tabsContainer.style.display === '') {
-        tabsContainer.style.display = 'block';
-    } else {
-        tabsContainer.style.display = 'none';
-    }
-});
-
-// JavaScript for showing specific tabs when clicked
-const tabButtons = document.querySelectorAll('.tab-button');
-tabButtons.forEach(button => {
-    button.addEventListener('click', function() {
-        const tabId = this.getAttribute('data-tab');
-        const allTabs = document.querySelectorAll('.tab-content');
-        allTabs.forEach(tab => tab.style.display = 'none');
-        document.getElementById(tabId).style.display = 'block';
-    });
-});
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
