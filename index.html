@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+<header>
     <h1>Happy Valentine's Week ❤️</h1>
     <div id="countdown">
         <h2>Countdown for you to be my Valentine 💖</h2>
@@ -20,7 +20,7 @@
     </div>
 </header>
 
- <div id="love-letter-section">
+<div id="love-letter-section">
     <button id="hidden-button" style="display: inline-block; position: absolute; bottom: 20px; right: 20px; background: #ff66b2; color: white; border: none; padding: 10px 15px; border-radius: 50px; cursor: pointer; font-size: 16px; box-shadow: 0 0 15px #ff99c2;">
         Open Love Letter ❤️
     </button>
@@ -48,62 +48,42 @@
         </p>
     </div>
 </div>
-<div id="love-letter-section">
-<nav>
-        <ul>
-            <li><a href="#rose-day">Rose Day</a></li>
-            <li><a href="#propose-day">Propose Day</a></li>
-            <li><a href="#chocolate-day">Chocolate Day</a></li>
-            <li><a href="#teddy-day">Teddy Day</a></li>
-            <li><a href="#promise-day">Promise Day</a></li>
-            <li><a href="#hug-day">Hug Day</a></li>
-            <li><a href="#kiss-day">Kiss Day</a></li>
-            <li><a href="#valentines-day">Valentine's Day</a></li>
-            <li><a href="#photo-collage">Photo Collage</a></li>
-        </ul>
-    </nav>
 
-    <nav>
+<nav>
     <div id="valentines-menu" style="position: absolute; top: 10px; left: 10px;">
         <button id="show-menu" style="background: #e60073; color: white; border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer; font-size: 16px;">Show Days</button>
         <div id="tabs-container" style="display: none; background: #ffb3b3; padding: 10px; border-radius: 5px; margin-top: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
             <button class="tab-button" data-tab="rose-day" style="background: #ff66b2; color: white; border: none; padding: 10px; margin: 5px; border-radius: 5px; cursor: pointer;">Rose Day</button>
             <button class="tab-button" data-tab="propose-day" style="background: #ff66b2; color: white; border: none; padding: 10px; margin: 5px; border-radius: 5px; cursor: pointer;">Propose Day</button>
             <button class="tab-button" data-tab="chocolate-day" style="background: #ff66b2; color: white; border: none; padding: 10px; margin: 5px; border-radius: 5px; cursor: pointer;">Chocolate Day</button>
-            <!-- Add more buttons for other days here -->
+            <!-- Add buttons for other days -->
         </div>
     </div>
 </nav>
+
 <section id="valentines-week">
-    <div class="tab-content" id="rose-day">
+    <div class="tab-content" id="rose-day" style="display: none;">
         <h2>Rose Day 🌹</h2>
         <p>Roses are red, violets are blue, my heart is filled with love for you!</p>
-        <img src="images/rose-day.jpg" alt="Rose Day">
     </div>
-    <div class="tab-content" id="propose-day">
+    <div class="tab-content" id="propose-day" style="display: none;">
         <h2>Propose Day 💍</h2>
         <p>From the moment I met you, I knew my heart belonged to you.</p>
     </div>
-    <div class="tab-content" id="chocolate-day">
+    <div class="tab-content" id="chocolate-day" style="display: none;">
         <h2>Chocolate Day 🍫</h2>
         <p>Sweet chocolates for my sweet love!</p>
     </div>
 </section>
 
-    <section id="photo-collage">
-        <h2>Our Memories Together 📸</h2>
-        <div id="collage-area">
-            <input type="file" id="photo-upload" multiple>
-            <div id="collage"></div>
-        </div>
-    </section>
+<section id="photo-collage">
+    <h2>Our Memories Together 📸</h2>
+    <div id="collage-area">
+        <input type="file" id="photo-upload" multiple>
+        <div id="collage"></div>
+    </div>
+</section>
 
-    <section id="proposal">
-        <h2>A Special Question 💖</h2>
-        <p>Click the stars to reveal the message...</p>
-        <div id="hidden-message">Will you be my Valentine? ❤️</div>
-    </section>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
