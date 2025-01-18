@@ -105,6 +105,28 @@
     </div>
 </section>
 
-<script src="script.js"></script>
+<script>
+// JavaScript for the "Show Days" button
+document.getElementById('show-menu').addEventListener('click', function() {
+    const tabsContainer = document.getElementById('tabs-container');
+    if (tabsContainer.style.display === 'none' || tabsContainer.style.display === '') {
+        tabsContainer.style.display = 'block';
+    } else {
+        tabsContainer.style.display = 'none';
+    }
+});
+
+// JavaScript for showing specific tabs when clicked
+const tabButtons = document.querySelectorAll('.tab-button');
+tabButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const tabId = this.getAttribute('data-tab');
+        const allTabs = document.querySelectorAll('.tab-content');
+        allTabs.forEach(tab => tab.style.display = 'none');
+        document.getElementById(tabId).style.display = 'block';
+    });
+});
+</script>
+
 </body>
 </html>
