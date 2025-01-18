@@ -27,4 +27,15 @@ document.addEventListener("DOMContentLoaded", function () {
             startCountdown(newDate);
         }
     });
+
+    function showTab(tabId) {
+        document.querySelectorAll('.tab-content').forEach(tab => {
+            tab.style.display = 'none';
+        });
+        document.getElementById(tabId).style.display = 'block';
+    }
+
+    document.getElementById("love-letter-button").addEventListener("click", function() {
+        document.getElementById("love-letter").classList.toggle("hidden");
+    });
 });
